@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>I Love You ❤️</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            background-image: url("images/love-background.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+
+            font-family: Georgia, serif;
+            color: white;
+        }
+
+        .love-box {
+            background: rgba(0, 0, 0, 0.35);
+
+            padding: 25px 35px;
+
+            border-radius: 25px;
+
+            backdrop-filter: blur(5px);
+
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+
+            max-width: 550px;
+        }
+
+        h1 {
+            font-size: 38px;
+            margin-bottom: 20px;
+
+            white-space: nowrap;
+
+            text-shadow: 2px 2px 8px #000;
+        }
+
+        p {
+            font-size: 25px;
+            line-height: 1.6;
+
+            text-shadow: 1px 1px 5px #000;
+        }
+
+        .love-button {
+            display: inline-block;
+
+            margin-top: 20px;
+
+            padding: 12px 25px;
+
+            background: #ff4f81;
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 30px;
+
+            font-size: 18px;
+
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+
+            transition: 0.3s;
+        }
+
+        .love-button:hover {
+            transform: scale(1.08);
+            background: #ff2f68;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="love-box">
+
+        <h1 id="typing"></h1>
+
+        <p>
+            You are my favourite person in the whole world. 🥹
+            I can't imagine this world without you my love.
+            Tere bina ye pagliii adhuriii hai Shoniiii ❤️
+        </p>
+
+        <a href="letter.html" class="love-button">
+            There's something more for you 💌
+        </a>
+
+    </div>
+
+
+    <script>
+
+        const text = "I LOVE YOU SHONIII ❤️";
+        let i = 0;
+
+        function typing() {
+
+            if (i < text.length) {
+
+                document.getElementById("typing").innerHTML += text.charAt(i);
+
+                i++;
+
+                setTimeout(typing, 120);
+
+            }
+
+        }
+
+        typing();
+
+    </script>
+
+</body>
+
+</html>
